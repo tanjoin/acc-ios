@@ -16,8 +16,7 @@
   
   NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
   formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
-
-  
+    
   NSDate *convertedDate = nil;
   for (NSString *dateFormat in dateFormats) {
     [formatter setDateFormat:dateFormat];

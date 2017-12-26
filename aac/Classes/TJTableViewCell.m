@@ -6,17 +6,11 @@
 #import "TJTableViewCell.h"
 
 @interface TJTableViewCell ()
-
 @property (strong, nonatomic, nonnull) IBOutlet UILabel *idLabel;
-
 @property (strong, nonatomic, nonnull) IBOutlet UILabel *serviceTitleLabel;
-
 @property (strong, nonatomic, nonnull) IBOutlet UILabel *dayLabel;
-
 @property (strong, nonatomic, nonnull) IBOutlet UILabel *titleLabel;
-
 @property (strong, nonatomic, nonnull) IBOutlet UILabel *descriptionLabel;
-
 @end
 
 @implementation TJTableViewCell
@@ -44,12 +38,6 @@
 
 #pragma mark - Getter & Setter
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-  [super setSelected:selected animated:animated];
-  
-  // Configure the view for the selected state
-}
-
 - (void)setCampaign:(TJCampaign *)campaign
 {
   _campaign = campaign;
@@ -58,7 +46,7 @@
     _serviceTitleLabel.text = _campaign.serviceTitle;
     _dayLabel.text = nil;
     _titleLabel.text = _campaign.title;
-    _descriptionLabel.text = _campaign.descriptionText;
+    _descriptionLabel.text = nil;
     [self layoutIfNeeded];
   }
 }

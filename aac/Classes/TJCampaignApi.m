@@ -11,7 +11,7 @@
 {
   NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
   [request setHTTPMethod:@"GET"];
-  [request setURL:[NSURL URLWithString:@"https://tanjo.in/acc/campaign.json"]];
+  [request setURL:[NSURL URLWithString:@"https://tanjoin.github.io/acc/campaign.json"]];
   
   NSURLSessionDataTask *task = [[NSURLSession sharedSession]
                                 dataTaskWithRequest:request

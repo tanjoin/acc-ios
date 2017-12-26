@@ -11,4 +11,10 @@
 
 @property (strong, nonatomic, nullable) NSDate *end;
 
+@property (readonly, nonatomic, nonnull) NSString *startString;
+
+@property (readonly, nonatomic, nonnull) NSString *endString;
+
+@property (readonly, nonatomic, nonnull) NSString *toString;
+
 @end

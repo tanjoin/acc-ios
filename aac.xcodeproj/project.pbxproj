@@ -19,6 +19,7 @@
 		4300542D1DD5A967008F38BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4300542C1DD5A967008F38BD /* LaunchScreen.storyboard */; };
 		430054321DD5C2E6008F38BD /* TJTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 430054301DD5C2E6008F38BD /* TJTableViewCell.m */; };
 		430054331DD5C2E6008F38BD /* TJTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 430054311DD5C2E6008F38BD /* TJTableViewCell.xib */; };
+		4388A6561FF25B6E004A830C /* TJDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4388A6551FF25B6E004A830C /* TJDetailTableViewController.m */; };
 		43ADA1CF1DC9DE2000F11DFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43ADA1CE1DC9DE2000F11DFE /* main.m */; };
 		43ADA1D21DC9DE2000F11DFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43ADA1D11DC9DE2000F11DFE /* AppDelegate.m */; };
 		43ADA1DA1DC9DE2000F11DFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43ADA1D91DC9DE2000F11DFE /* Assets.xcassets */; };
@@ -70,6 +71,8 @@
 		4300542F1DD5C2E6008F38BD /* TJTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJTableViewCell.h; path = Classes/TJTableViewCell.h; sourceTree = "<group>"; };
 		430054301DD5C2E6008F38BD /* TJTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJTableViewCell.m; path = Classes/TJTableViewCell.m; sourceTree = "<group>"; };
 		430054311DD5C2E6008F38BD /* TJTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJTableViewCell.xib; path = Classes/TJTableViewCell.xib; sourceTree = "<group>"; };
+		4388A6541FF25B6E004A830C /* TJDetailTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TJDetailTableViewController.h; path = Classes/TJDetailTableViewController.h; sourceTree = "<group>"; };
+		4388A6551FF25B6E004A830C /* TJDetailTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TJDetailTableViewController.m; path = Classes/TJDetailTableViewController.m; sourceTree = "<group>"; };
 		43ADA1CA1DC9DE2000F11DFE /* aac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43ADA1CE1DC9DE2000F11DFE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		43ADA1D01DC9DE2000F11DFE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -154,6 +157,8 @@
 			children = (
 				4300540D1DD575FE008F38BD /* TJViewController.h */,
 				4300540C1DD575FE008F38BD /* TJViewController.m */,
+				4388A6541FF25B6E004A830C /* TJDetailTableViewController.h */,
+				4388A6551FF25B6E004A830C /* TJDetailTableViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -528,6 +533,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4388A6561FF25B6E004A830C /* TJDetailTableViewController.m in Sources */,
 				43ADA1D21DC9DE2000F11DFE /* AppDelegate.m in Sources */,
 				430054141DD577C4008F38BD /* TJCampaign.m in Sources */,
 				430054321DD5C2E6008F38BD /* TJTableViewCell.m in Sources */,
@@ -614,7 +620,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -655,7 +661,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

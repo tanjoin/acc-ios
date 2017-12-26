@@ -7,12 +7,11 @@
 #import "TJCampaignApi.h"
 #import "TJCampaignsResponse.h"
 #import "TJCampaign.h"
+#import "TJDetailTableViewController.h"
 #import "TJTableViewCell.h"
 
 @interface TJViewController ()
-
 @property (copy, nonatomic, nullable) TJCampaignsResponse *campaignsResponse;
-
 @end
 
 @implementation TJViewController
@@ -29,7 +28,9 @@
       return;
     }
     _campaignsResponse = [[TJCampaignsResponse alloc] initWithData:data error:&error];
-    [self.tableView reloadData];
+      dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
+      });
   }];
 }
 
@@ -79,34 +80,10 @@
     return;
   }
 
-  NSString *url = campaign.urls[0];
-  
-  // open with Chrome
-  NSURL *inputURL = [NSURL URLWithString:url];
-  NSString *scheme = inputURL.scheme;
-  NSString *chromeScheme = nil;
-  if ([scheme isEqualToString:@"http"]) {
-    chromeScheme = @"googlechrome";
-  } else if ([scheme isEqualToString:@"https"]) {
-    chromeScheme = @"googlechromes";
-  }
-  
-  if (chromeScheme) {
-    NSString *absoluteString = [inputURL absoluteString];
-    NSRange rangeForScheme = [absoluteString rangeOfString:@":"];
-    NSString *urlNoScheme =
-    [absoluteString substringFromIndex:rangeForScheme.location];
-    NSString *chromeURLString =
-    [chromeScheme stringByAppendingString:urlNoScheme];
-    NSURL *chromeURL = [NSURL URLWithString:chromeURLString];
+  TJDetailTableViewController *viewController = [[TJDetailTableViewController alloc] init];
+  viewController.campaign = campaign;
     
-    // Open the URL with Chrome.
-    [[UIApplication sharedApplication] openURL:chromeURL options:@{} completionHandler:^(BOOL success) {
-      if (!success) {
-        [[UIApplication sharedApplication] openURL:inputURL options:@{} completionHandler:nil];
-      }
-    }];
-  }
+  [self.navigationController pushViewController:viewController animated:true];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
